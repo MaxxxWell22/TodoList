@@ -46,19 +46,17 @@ export default {
       taskName: this.todo ? this.todo.todo : '',
       isCompleted: this.todo ? this.todo.completed : false,
       isNotCompleted: this.todo ? !this.todo.completed : false,
-      creationDate: this.todo ? this.todo.time : '', // Инициализируем дату
-      isEditingDate: false, // Состояние для управления видимостью редактора даты
+      creationDate: this.todo ? this.todo.time : '',
+      isEditingDate: false,
     };
   },
   watch: {
     isCompleted(newValue) {
-      // Если задача выполнена, то "не выполнено" должно быть false
       if (newValue) {
         this.isNotCompleted = false;
       }
     },
     isNotCompleted(newValue) {
-      // Если задача не выполнена, то "выполнено" должно быть false
       if (newValue) {
         this.isCompleted = false;
       }
@@ -66,7 +64,7 @@ export default {
   },
   methods: {
     editDate() {
-      this.isEditingDate = !this.isEditingDate; // Переключаем состояние редактирования даты
+      this.isEditingDate = !this.isEditingDate;
     },
     save() {
       const updatedTodo = {
@@ -89,18 +87,18 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   width: 500px;
-  background-color: white; /* Цвет фона модального окна */
+  background-color: white;
   padding: 20px;
-  border-radius: 8px; /* Закругленные углы */
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.3); /* Тень для модального окна */
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
   align-items: start;

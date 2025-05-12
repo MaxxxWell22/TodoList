@@ -21,12 +21,12 @@ export default {
   },
   watch: {
     value(newValue) {
-      this.searchText = newValue; // Обновляем локальное состояние при изменении пропа
+      this.searchText = newValue;
     },
   },
   methods: {
     updateSearch() {
-      this.$emit('input', this.searchText); // Эмитируем событие при изменении текста
+      this.$emit('input', this.searchText);
     },
   },
 };

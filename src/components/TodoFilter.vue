@@ -19,12 +19,12 @@ export default {
   },
   data() {
     return {
-      localFilter: this.selectedFilter, // Локальное состояние для фильтра
+      localFilter: this.selectedFilter,
     };
   },
   watch: {
     selectedFilter(newValue) {
-      this.localFilter = newValue; // Обновляем локальное состояние при изменении пропа
+      this.localFilter = newValue; 
     },
   },
   methods: {

@@ -110,7 +110,7 @@ export default {
        }
        
        this.closeModal();
-       this.closeModalNew(); // Закрываем модальное окно добавления нового todo
+       this.closeModalNew();
      },
      deleteTodo(todo) {
        if (confirm(`Вы уверены, что хотите удалить задачу "${todo.todo}"?`)) {

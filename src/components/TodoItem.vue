@@ -79,10 +79,10 @@ td {
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg); /* Начальное состояние */
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg); /* Конечное состояние */
+    transform: rotate(360deg);
   }
 }
 

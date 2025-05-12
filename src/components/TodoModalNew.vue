@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     save() {
-      if (this.$refs.form.validate()) { // Проверяем валидность формы
+      if (this.$refs.form.validate()) {
         const todos = JSON.parse(localStorage.getItem('todos')) || [];
 
         const maxId = todos.length > 0 ? Math.max(...todos.map(todo => todo.id)) : 0;
@@ -83,7 +83,6 @@ export default {
         
         this.$emit('save', newTodo, 'add');
         
-        // Сбрасываем поля после сохранения
         this.taskName = '';
         this.isCompleted = false;
         this.isNotCompleted = false;
@@ -101,18 +100,18 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   width: 500px;
-  background-color: white; /* Цвет фона модального окна */
+  background-color: white;
   padding: 20px;
-  border-radius: 8px; /* Закругленные углы */
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.3); /* Тень для модального окна */
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3); 
   display: flex;
   flex-direction: column;
   align-items: start;
